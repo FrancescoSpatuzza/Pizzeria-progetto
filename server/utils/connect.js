@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import {EventEmitter} from "node:events";
 
-
+class DB {};
 
 class Connect extends EventEmitter{
     constructor(){
@@ -13,8 +13,10 @@ class Connect extends EventEmitter{
        await this.mongoClient.connect();
        console.log("connessione a mongo db avvenuta");
        this.emit("connectionOk");
+       DB.pizzeria = this.mongoClient.db("Pizzeria");
+       DB.menu = DB.pizzeria.collection("menu");
     }
 }
 
 
-export default Connect;
+export  {Connect, DB};

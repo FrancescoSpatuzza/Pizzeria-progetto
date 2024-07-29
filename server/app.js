@@ -3,7 +3,7 @@ import helmet from "helmet";
 import homeRouter from "./routes/homeRouter.js";
 import adminRouter from "./routes/adminRouter.js";
 import chiSiamoRouter from "./routes/chiSiamoRouter.js"
-import Connect from "./utils/connect.js";
+import {Connect, DB} from "./utils/connect.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000 ; 

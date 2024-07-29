@@ -1,0 +1,14 @@
+<main>
+    <% if (pizze.length > 0) { %>
+
+        <% for(let pizza of pizze) { %>
+
+                    <article>
+                        <h3><%= pizza.nome %> (<%= pizza.prezzo %>)</h3>
+
+                    </article>
+
+            <% } %> 
+
+    <% } %> 
+</main>
