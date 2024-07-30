@@ -1,0 +1,15 @@
+<main>
+    <form action="/admin/modifica/delete" method="post">
+        <div>
+            <label for="pizzaNome">Quale pizza vuoi eliminare?</label>
+            <select id="pizzaNome" name="pizzaNome">
+                <% pizze.forEach(pizza => { %>
+                    <option value="<%= pizza.nome %>"><%= pizza.nome %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Elimina la pizza dal menu">
+        </div>
+    </form>
+</main>

@@ -1,4 +1,4 @@
-import  express from "express";
+import  express, { urlencoded } from "express";
 import helmet from "helmet";
 import homeRouter from "./routes/homeRouter.js";
 import adminRouter from "./routes/adminRouter.js";
@@ -13,6 +13,7 @@ const connect = new Connect();
 
 app.set("view engine", "ejs");
 app.use(helmet());
+app.use(express.urlencoded({extended: true}));
 app.use(homeRouter);
 app.use(adminRouter);
 app.use(chiSiamoRouter);

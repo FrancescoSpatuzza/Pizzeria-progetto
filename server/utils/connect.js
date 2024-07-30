@@ -13,9 +13,13 @@ class Connect extends EventEmitter{
        await this.mongoClient.connect();
        console.log("connessione a mongo db avvenuta");
        this.emit("connectionOk");
-       DB.pizzeria = this.mongoClient.db("Pizzeria");
-       DB.menu = DB.pizzeria.collection("menu");
+       this.setDbReference();
     }
+setDbReference(){
+    DB.pizzeria = this.mongoClient.db("Pizzeria");
+    DB.menu = DB.pizzeria.collection("menu");
+}
+
 }
 
 

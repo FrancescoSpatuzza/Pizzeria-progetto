@@ -1,0 +1,29 @@
+<main>
+  
+    <form action="/admin/modifica/change" method="post">
+
+        <div>
+            <label for="pizzaNome">Quale pizza vuoi modificare ?</label>
+            <select id="pizzaNome" name="pizzaNome">
+                <% pizze.forEach(pizza => { %>
+                    <option value="<%= pizza.nome %>"><%= pizza.nome %></option>
+                <% }); %>
+            </select>
+        </div>
+
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text"  name="nome">
+        </div>
+        <div>
+            <label for="prezzo">Prezzo</label>
+            <input type="number" name="prezzo">
+        </div>
+        <div><label for="ingredienti">ingredienti</label>
+            <input type="text" name="ingredienti">
+        </div>
+        <div>
+            <input type="submit" value="Modifica la pizza dal menu">
+        </div>
+    </form>
+    </main>

@@ -4,11 +4,28 @@
         <% for(let pizza of pizze) { %>
 
                     <article>
-                        <h3><%= pizza.nome %> (<%= pizza.prezzo %>)</h3>
+                        <h3><%= pizza.nome %> ( <%= pizza.prezzo %> € )</h3>
+                        <p> <%= pizza.ingredienti %> </p>
 
                     </article>
 
             <% } %> 
 
     <% } %> 
+
+
+                <form action="/admin/modifica/add">
+                    <button><a href="/admin/modifica/add">Aggiungi una pizza nel menu</a></button>
+                </form>
+
+
+
+                <form action="/admin/modifica/change">
+                    <button><a href="/admin/modifica/change">Modifica una pizza nel menu</a></button>
+                </form>
+
+
+                <form action="/admin/modifica/delete">
+                    <button><a href="/admin/modifica/delete">Elimina una pizza nel menu</a></button>
+                </form>
 </main>
