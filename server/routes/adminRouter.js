@@ -121,4 +121,21 @@ router.post("/admin/modifica/delete",async (req, res)=> {
 })
 
 
+
+// rotta del menu 
+
+
+router.get("/menu", async (req, res)=> {
+    const pizzeCursor = await DB.menu.find({});
+    const pizze = await pizzeCursor.toArray();
+    res.json(pizze);
+});
+
+router.post("/menu", async (req, res)=> {
+    const pizzeCursor = await DB.menu.find({});
+    const pizze = await pizzeCursor.toArray();
+    res.json(pizze);
+})
+
+
 export default router;
