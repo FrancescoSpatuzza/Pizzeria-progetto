@@ -18,6 +18,7 @@ class Connect extends EventEmitter{
 setDbReference(){
     DB.pizzeria = this.mongoClient.db("Pizzeria");
     DB.menu = DB.pizzeria.collection("menu");
+    DB.admin = DB.pizzeria.collection("admin");
 }
 
 }

@@ -1,18 +1,29 @@
 import express from "express";
 import { DB } from "../utils/connect.js";
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
 // controllo autenticazione dell admin
 
-const adminIsLogged = (req, res, next) => {
-   let isLogged = true;
-    if(isLogged){
-        console.log(isLogged);
+
+
+
+const adminIsLogged = async (req, res, next) => {
+    const admin = await DB.admin.findOne({ nome: "admin" });
+   const { nome , password } = req.body;
+   const salt = await bcrypt.genSalt(10)
+   const hash =await bcrypt.hash (password, salt);
+   const isMatch = await bcrypt.compare(password, admin.password);
+   if(nome !== admin.nome) {
+    res.send("Non sei autorizzato , nome admin errato!")
+   }else{
+    if (isMatch) {
         next();
     }else {
-        res.send("Non sei autorizzato");
+        res.send("non sei autorizzato, password errata!");
     }
+}
 }
 
 
@@ -30,7 +41,7 @@ router.get("/admin", async (req, res)=> {
 // rotta per la modifica del menu dell admin
 
 
-router.get("/admin/modifica",adminIsLogged, async (req, res)=> {
+router.get("/admin/modifica", async (req, res)=> {
     const pizzeCursor = await DB.menu.find({});
     const pizze = await pizzeCursor.toArray();
   
@@ -40,7 +51,7 @@ router.get("/admin/modifica",adminIsLogged, async (req, res)=> {
     })
 });
 
-router.post("/admin/modifica", async (req, res)=> { 
+router.post("/admin/modifica",adminIsLogged, async (req, res)=> { 
     res.redirect("/admin/modifica");
 });
 
