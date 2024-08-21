@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
  const [pizze, setPizze] = useState([]);
@@ -19,20 +20,34 @@ function App() {
  );
 
  return(
-  <div>
-    <h1>Il nostro Menu</h1>
+  <div className="menu-container">
+  <div className="decoration-top"></div>
+  <div className="container d-flex flex-column align-items-center py-5">
+    <h1 className="text-center menu-title display-4 mb-5">Il nostro Menu</h1>
+    
     <input 
-      type='text'
-      placeholder='Cerca una pizza'
+      className="form-control my-4 text-center"
+      type="text"
+      placeholder="Cerca una pizza"
       value={searchbar}
-      onChange={(e)=> setSearchBar(e.target.value)}
+      onChange={(e) => setSearchBar(e.target.value)}
+      style={{ maxWidth: '600px' }}
     />
-    <ul>
+    
+    <ul className="list-unstyled w-100">
       {pizzeFilter.map((pizza, i) => (
-        <li key={i}> {pizza.nome} prezzo: {pizza.prezzo} €    <p>fatto con: {pizza.ingredienti}</p> </li>
+        <li className="text-center mb-4 border-bottom pb-4" key={i}>
+          <h4 className="font-weight-bold">{pizza.nome}</h4> 
+          <p className="text-muted">Prezzo: {pizza.prezzo} €</p>   
+          <p className="font-italic">Fatto con: {pizza.ingredienti}</p> 
+        </li>
       ))}
     </ul>
   </div>
+  <div className="decoration-bottom"></div>
+</div>
+
+
  )
 }
 

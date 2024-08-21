@@ -1,0 +1,69 @@
+.menu-container {
+    background-color: #f5f5dc; /* Beige molto chiaro */
+    min-height: 100vh; /* Almeno altezza della finestra */
+    padding: 20px;
+    position: relative;
+}
+
+.decoration-top, .decoration-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: repeating-linear-gradient(
+        45deg,
+        #8b4513,
+        #8b4513 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.decoration-top {
+    top: 0;
+    left: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.decoration-bottom {
+    bottom: 0;
+    left: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8); /* Sfondo bianco traslucido per il contenuto */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+input.form-control:focus {
+    border-color: #8b4513; /* Marrone scuro in tema */
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.5); /* Effetto ombra marrone chiaro */
+    outline: none; /* Rimuove il contorno */
+}
+
+
+.menu-title {
+    font-style: italic; /* Rende il testo corsivo */
+    font-family: 'Times New Roman', Times, serif; /* Font elegante */
+    font-weight: bold; /* Rende il testo più evidente */
+    letter-spacing: 2px; /* Spazia leggermente le lettere */
+}
+
+ul.list-unstyled li {
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul.list-unstyled li:hover {
+    transform: scale(1.02); /* Leggero zoom al passaggio del mouse */
+}
+
+p {
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Georgia', serif; /* Font elegante per i nomi delle pizze */
+}
