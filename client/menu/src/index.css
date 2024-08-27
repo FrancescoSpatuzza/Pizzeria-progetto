@@ -1,6 +1,11 @@
+body {
+    font-family: 'Merriweather', serif; 
+    background-color: #f5f5dc; 
+}
+
 .menu-container {
-    background-color: #f5f5dc; /* Beige molto chiaro */
-    min-height: 100vh; /* Almeno altezza della finestra */
+    background-color: #f5f5dc; 
+    min-height: 100vh; 
     padding: 20px;
     position: relative;
 }
@@ -31,24 +36,24 @@
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.8); /* Sfondo bianco traslucido per il contenuto */
+    background: rgba(255, 255, 255, 0.8);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 input.form-control:focus {
-    border-color: #8b4513; /* Marrone scuro in tema */
-    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.5); /* Effetto ombra marrone chiaro */
-    outline: none; /* Rimuove il contorno */
+    border-color: #8b4513; 
+    box-shadow: 0 0 0 0.25rem rgba(139, 69, 19, 0.5); 
+    outline: none; 
 }
 
 
 .menu-title {
-    font-style: italic; /* Rende il testo corsivo */
-    font-family: 'Times New Roman', Times, serif; /* Font elegante */
-    font-weight: bold; /* Rende il testo più evidente */
-    letter-spacing: 2px; /* Spazia leggermente le lettere */
+    font-family: 'Playfair Display', serif; 
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 ul.list-unstyled li {
@@ -57,13 +62,17 @@ ul.list-unstyled li {
 }
 
 ul.list-unstyled li:hover {
-    transform: scale(1.02); /* Leggero zoom al passaggio del mouse */
+    transform: scale(1.02);
 }
 
 p {
     margin: 0;
+    font-family: 'Merriweather', serif; 
+
 }
 
 h4 {
-    font-family: 'Georgia', serif; /* Font elegante per i nomi delle pizze */
-}
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700; }
+
+    

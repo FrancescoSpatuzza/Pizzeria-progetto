@@ -1,0 +1,65 @@
+/* index.css */
+body {
+    font-family: 'Merriweather', serif; 
+    background-color: #f5f5dc; 
+}
+
+header {
+    font-family: 'Playfair Display', serif;
+    background-color: #f5f5dc; 
+    padding: 20px 0;
+    border-bottom: 2px solid #8b4513;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8b4513;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Merriweather', serif;
+    color: #8b4513;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #deb887;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border-color: #8b4513;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2880,80,80,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+main {
+    text-align: center; /* Allinea il testo e l'immagine al centro */
+    padding: 20px; /* Aggiunge un padding per un po' di spazio interno */
+    background-color: #f5f5dc; /* Colore di sfondo simile a quello del menu */
+}
+
+main img {
+    max-width: 100%; /* L'immagine non supererà mai la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera per profondità */
+    margin-top: 20px; /* Aggiunge margine sopra l'immagine */
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Stile del font per i titoli */
+    font-weight: bold; /* Grassetto per i titoli */
+    margin-bottom: 20px; /* Margine inferiore per separare i titoli dal contenuto */
+}
+
+p {
+    font-family: 'Merriweather', serif; /* Stile del font per i paragrafi */
+    color: #333; /* Colore del testo */
+    line-height: 1.6; /* Aumenta l'altezza della riga per una migliore leggibilità */
+    margin-bottom: 15px; /* Margine inferiore per separare i paragrafi */
+}

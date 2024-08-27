@@ -1,33 +1,38 @@
-<main>
+<main class="container my-5">
+    <h2 class="text-center menu-title">Menu delle Pizze</h2>
+
     <% if (pizze.length > 0) { %>
-
-        <% for(let pizza of pizze) { %>
-
-                    <article>
-                        <h3><%= pizza.nome %> ( <%= pizza.prezzo %> € )</h3>
-                        <p> <%= pizza.ingredienti %> </p>
-
+        <div class="row">
+            <% for(let pizza of pizze) { %>
+                <div class="col-md-4 mb-4">
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="card-title"><%= pizza.nome %> ( <%= pizza.prezzo %> € )</h3>
+                            <p class="card-text"><%= pizza.ingredienti %></p>
+                        </div>
                     </article>
-
+                </div>
             <% } %> 
-
+        </div>
+    <% } else { %>
+        <p class="text-center">Nessuna pizza disponibile nel menu.</p>
     <% } %> 
 
+    <div class="text-center mt-4">
+        <form action="/admin/modifica/add" method="get" class="d-inline">
+            <button type="submit" class="btn btn-success">Aggiungi una pizza nel menu</button>
+        </form>
 
-                <form action="/admin/modifica/add">
-                    <button><a href="/admin/modifica/add">Aggiungi una pizza nel menu</a></button>
-                </form>
+        <form action="/admin/modifica/change" method="get" class="d-inline">
+            <button type="submit" class="btn btn-warning">Modifica una pizza nel menu</button>
+        </form>
 
+        <form action="/admin/modifica/delete" method="get" class="d-inline">
+            <button type="submit" class="btn btn-danger">Elimina una pizza nel menu</button>
+        </form>
 
-
-                <form action="/admin/modifica/change">
-                    <button><a href="/admin/modifica/change">Modifica una pizza nel menu</a></button>
-                </form>
-
-
-                <form action="/admin/modifica/delete">
-                    <button><a href="/admin/modifica/delete">Elimina una pizza nel menu</a></button>
-                </form>
-
-                <button><a href="/admin">Torna indietro</a></button>
+        <form action="/admin" method="get" class="d-inline">
+            <button type="submit" class="btn btn-secondary">Torna indietro</button>
+        </form>
+    </div>
 </main>
