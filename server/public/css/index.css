@@ -1,4 +1,4 @@
-/* index.css */
+
 body {
     font-family: 'Merriweather', serif; 
     background-color: #f5f5dc; 
@@ -38,28 +38,37 @@ header {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2880,80,80,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 main {
-    text-align: center; /* Allinea il testo e l'immagine al centro */
-    padding: 20px; /* Aggiunge un padding per un po' di spazio interno */
-    background-color: #f5f5dc; /* Colore di sfondo simile a quello del menu */
+    text-align: center; 
+    padding: 20px; 
+    background-color: #f5f5dc; 
 }
 
 main img {
-    max-width: 100%; /* L'immagine non supererà mai la larghezza del contenitore */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    border-radius: 10px; /* Aggiunge angoli arrotondati all'immagine */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra leggera per profondità */
-    margin-top: 20px; /* Aggiunge margine sopra l'immagine */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    margin-top: 20px; 
 }
 
 h2 {
-    font-family: 'Playfair Display', serif; /* Stile del font per i titoli */
-    font-weight: bold; /* Grassetto per i titoli */
-    margin-bottom: 20px; /* Margine inferiore per separare i titoli dal contenuto */
+    font-family: 'Playfair Display', serif; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
 }
 
 p {
-    font-family: 'Merriweather', serif; /* Stile del font per i paragrafi */
-    color: #333; /* Colore del testo */
-    line-height: 1.6; /* Aumenta l'altezza della riga per una migliore leggibilità */
-    margin-bottom: 15px; /* Margine inferiore per separare i paragrafi */
+    font-family: 'Merriweather', serif; 
+    font-size: 1.1rem;
+    color: #333; 
+    line-height: 1.8; 
+    letter-spacing: 0.5px; 
+    margin-bottom: 20px;
+    font-weight: 300; 
+}
+
+
+
+.navbar-collapse {
+    display: block !important; /* forzare la visualizzazione */
 }
