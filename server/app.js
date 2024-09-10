@@ -17,12 +17,17 @@ const __dirname = path.dirname(__filename);
 
 app.set("view engine", "ejs");
 
+app.use(express.static(path.join(__dirname, 'client_build')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(homeRouter);
 app.use(adminRouter);
 app.use(chiSiamoRouter);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client_build', 'index.html'));
+  });
 
 connect.on("connectionOk", () => {
     app.listen(PORT, console.log(`Server attivo su http://localhost:${PORT}`));
